@@ -31,8 +31,11 @@ button {
 }
 
 .center_div {
-  width: 25%;
-  height: 80vh;
+  /* width: 25%;
+  height: 80vh; */
+  height: auto;
+  max-height: 90vh;
+  overflow-y: auto;
   /* background: #f9d89c; */
   background-color: #f4f4f4;
   box-shadow: 5px 5px 25px -5px rgba(0, 0, 0, 0.5);
@@ -58,7 +61,7 @@ button {
   font-size: 20px;
   font-weight: 500;
   width: 60%;
-  border-bottom: 2px solid O#8566aa;
+  /* border-bottom: 2px solid #8566aa; */
   outline: none;
 }
 
@@ -115,7 +118,7 @@ button {
   border-radius: 50%;
   margin: 0 15px 0 35px;
   color: aliceblue;
-  box-shadow: 5px 5px 15px -5px Orgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }
 
@@ -129,7 +132,7 @@ button {
 
 @media (max-width: 768px) {
   .center_ div {
-    width: 55%;
+    width: 90%;
   }
 }
 .todo_style ~ fa-times {
@@ -148,4 +151,19 @@ button {
 .num_list {
   overflow: auto;
   height: 60vh;
+}
+
+.main_div input,
+.main_div button {
+  margin-top: 10px;
+}
+
+.main_div input {
+  width: calc(100% - 60px); /* Leaves space for button */
+}
+
+@media (max-width: 480px) {
+  .center_div {
+    width: 95%;
+  }
 }
